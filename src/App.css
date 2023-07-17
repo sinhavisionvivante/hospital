@@ -1,0 +1,58 @@
+.App {
+  width: 100vh;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.list-appointement {
+  top: 51px;
+  left: 971px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 38px;
+  background-color: #312E81;
+  color: white;
+}
+
+.date_time {
+  background-color: deepskyblue;
+  width: 180px;
+  height: 30px;
+  text-align: center;
+}
+.lt_gt{
+  background-color: blue;
+  padding: 1px 9px 0px 0px;
+  border-radius: 4px;
+  color: white;
+}
+.man-img{
+  border-radius: 8px;
+}
+.media.align-items-stretch {
+  display: flex;
+}
+.image-side{
+  border-radius: 8px;
+}
+.media-body {
+  margin-left: 10px;
+}
+.list-color{
+  background-color: lightgrey;
+}
+.col-2.vh-100 {
+  background-color: #312E81;;
+}
+.logo-brand-name{
+  font-family: Helvetica Rounded;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;  
+}
