@@ -3,16 +3,29 @@ import React from 'react'
 function Nav() {
     return (
         <div>
-          <nav class="navbar navbar-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand">Billing Overview</a>
-                    <div class="card">
-                        <div className="date_time">
-                            <span className='lt_gt'>&lt;</span>
-                            <span>February 2021</span>
-                            <span className='lt_gt'>&gt;</span>
+            <nav className="navbar navbar-light">
+                <div className="container-fluid">
+                    <a className="navbar-brand">Billing Overview</a>
+                    <div className="card ">
+                        <div className="card-body card-color">
+                            <div className="row justify-content-between">
+                                <div className="col-auto">
+                                    <span className="material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </span>
+                                </div>
+                                <div className="col-auto">
+                                    <span>February 2021</span>
+                                </div>
+                                <div className="col-auto">
+                                    <span className="material-symbols-outlined">
+                                        arrow_back_ios
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </nav>
         </div>

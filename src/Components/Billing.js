@@ -36,38 +36,37 @@ function Billing() {
         setUserData(user)
     }
     const [userData, setUserData] = useState();
-
     return (
         <div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="col-xl-6 col-md-12">
-                        {users.map((user, index) => (
-                            <div class="card cusor-pointer" onClick={() => handleClickUser(user)}>
-                                <div class="card-content">
-                                    <div class="card-body cleartfix">
-                                        <div class="media align-items-stretch">
-                                            <div class="align-self-center">
-                                                <img width="60px" height="60px" className='image-side' src="assets/man.jpeg" />
-                                            </div>
-                                            <div class="media-body">
-                                                <p>{user.name}</p>
-                                                <span>{user.age}, {user.gender}</span>
-                                                <p>Bill No  <span>012345678</span></p>
-                                            </div>
-                                            <div class="align-self-center">
-                                                <i class="icon-wallet success font-large-2"></i>
-                                            </div>
+            <div className="row">
+                <div class="col-sm-4">
+                    {users.map((user, index) => (
+                        <div className="card cusor-pointer mb-3" onClick={() => handleClickUser(user)}>
+                            <div className="card-content">
+                                <div className="card">
+                                    <div className="media align-items-stretch card-color p-2">
+                                        <div className="align-self-center">
+                                            <img width="60px" height="70px" className='image-side' src="assets/man.jpeg" />
+                                        </div>
+                                        <div className="media-body">
+                                            <p className="mb-0">{user.name}</p>
+                                            <span className="mb-0">{user.age}, {user.gender}</span><br/>
+                                            <span>Bill No 012345678</span>
+                                        </div>
+                                        <div className="align-self-center">
+                                            <i className="icon-wallet success font-large-2"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
-                <div class="col-sm-6">
+
+                <div class="col-sm-8">
                     <div class="card">
                         <div class="card-body">
+                        <div className='border-radious'>
                             <nav class="navbar navbar-light">
                                 <div class="container-fluid">
                                     <a class="navbar-brand">Billing Details</a>
@@ -152,6 +151,7 @@ function Billing() {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
