@@ -5,34 +5,25 @@ import Billing from './Billing'
 const Home = () => {
     return (
         <div className='px-9'>
-            {/* <Nav></Nav> */}
             <div className='container fluid'>
-                <div className='row g-3 my-2'>
-                    <div className='col-md-3'>
-                        <div class="search">
-                            <i class="fa fa-search"></i>
-                            <input type="text" class="form-control" placeholder="Search Patient" />
+                <div className='row my-2'>
+                    <div className='d-flex justify-content-between'>
+                        <div className='w-50'>
+                            <div class="form-group has-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="Search" />
+                            </div>
                         </div>
-                    </div>
-                    <div className='col-md-3'>
-                        <div className='list-appointement'>
-                            <p>Make an Appoinment</p>
-                        </div>
-                    </div>
-                    <div className='col-md-3'>
-                        <div className='list-appointement'>
-                            <p>Add Patient</p>
-                        </div>
-                    </div>
-                    <div className='col-md-3'>
-                        <div className='list-appointement'>
-                            <p>Notification</p>
+                        <div className='d-flex gap-4 align-items-center'>
+                            <p className="m-0 list-appointement">Make an Appointment</p>
+                            <p className="m-0 list-appointement">Add Patient</p>
+                            <p className="m-0 text-white notification"><i class="fa fa-bell" aria-hidden="true"></i></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <Nav/>
-            <Billing/>
+            <Nav />
+            <Billing />
         </div>
     )
 }

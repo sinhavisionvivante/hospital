@@ -7,6 +7,66 @@ body {
   margin: 0;
   padding: 0;
 }
+.card.w-100.details{
+  background-color: aliceblue; 
+}
+/* ----------sidebar-------------*/
+.card.row.w-25.bg-color{
+  background-color: #312E81;
+}
+.dashboard{
+  position: relative;
+  top: 40;
+}
+.settings{
+  position: absolute;
+  bottom: 0;
+}
+span.text-white {
+  margin-left: 25px;
+}
+.a.list-group-item.py-2:hover {
+  height: 20px;
+  background-color: red;
+}
+.mousehover:hover{
+  background-color: darkgray;
+  border-radius: 7px;
+}
+
+/*----------------home---------------*/
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+input.form-control {
+  border-radius: 20px;
+}
+.border-radious {
+  border: solid 2px #312E81;
+  border-radius: 5px;
+}
+.fa-bell{
+  height: 20px;
+  width: 20px;
+  clip-path: circle(50);
+  background-color: #312E81;
+}
+i.fa.fa-bell {
+  padding: 8px 21px 23px 8px;
+  clip-path: circle;
+  clip-path: circle(50%);
+}
 
 .list-appointement {
   top: 51px;
@@ -18,22 +78,25 @@ body {
 }
 
 .date_time {
-  background-color: deepskyblue;
+  background: #CBE3FF;
   width: 180px;
   height: 30px;
   text-align: center;
 }
-.lt_gt{
-  background-color: blue;
-  padding: 1px 9px 0px 0px;
+.material-symbols-outlined{
+  background: #312E81;
   border-radius: 4px;
   color: white;
+}
+.card-color{
+  background: #CBE3FF;
 }
 .man-img{
   border-radius: 8px;
 }
 .media.align-items-stretch {
   display: flex;
+  border-radius: 10px;
 }
 .image-side{
   border-radius: 8px;
@@ -44,9 +107,6 @@ body {
 .list-color{
   background-color: lightgrey;
 }
-.col-2.vh-100 {
-  background-color: #312E81;;
-}
 .logo-brand-name{
   font-family: Helvetica Rounded;
   font-size: 30px;
@@ -55,4 +115,8 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: white;  
+}
+.card-body.cleartfix {
+  background: #CBE3FF;
+  ;
 }
