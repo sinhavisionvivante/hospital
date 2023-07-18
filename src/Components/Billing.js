@@ -32,10 +32,10 @@ function Billing() {
         },
     ]);
 
-    const handleClickUser = (user) => {
+    const [userData, setUserData] = useState(null);
+        const handleClickUser = (user) => {
         setUserData(user)
     }
-    const [userData, setUserData] = useState();
     return (
         <div>
             <div className="row">
@@ -43,15 +43,15 @@ function Billing() {
                     {users.map((user, index) => (
                         <div className="card cusor-pointer mb-3" onClick={() => handleClickUser(user)}>
                             <div className="card-content">
-                                <div className="card">
+                                <div className="card border-0">
                                     <div className="media align-items-stretch card-color p-2">
                                         <div className="align-self-center">
                                             <img width="60px" height="70px" className='image-side' src="assets/man.jpeg" />
                                         </div>
                                         <div className="media-body">
                                             <p className="mb-0">{user.name}</p>
-                                            <span className="mb-0">{user.age}, {user.gender}</span><br/>
-                                            <span>Bill No 012345678</span>
+                                            <span className="mb-0">{user.age}, {user.gender}</span><br />
+                                            <span>Bill No {user.billno}</span>
                                         </div>
                                         <div className="align-self-center">
                                             <i className="icon-wallet success font-large-2"></i>
@@ -64,94 +64,92 @@ function Billing() {
                 </div>
 
                 <div class="col-sm-8">
-                    <div class="card">
-                        <div class="card-body">
-                        <div className='border-radious'>
-                            <nav class="navbar navbar-light">
-                                <div class="container-fluid">
-                                    <a class="navbar-brand">Billing Details</a>
-                                    <div>
-                                        <p className='list-appointement'>Print Bill</p>
-                                    </div>
-                                </div>
-                            </nav>
-                            <div >
-                                {userData && (
-                                    <div className='d-flex justify-content-between list-color'>
+                    <div class="card border-0">
+                        <div class="card-body p-4">
+                            <div className='border-radious'>
+                                <nav class="navbar navbar-light">
+                                    <div class="container-fluid mx-4 my-2">
+                                        <h3 class="navbar-brand fw-bold">Billing Details</h3>
                                         <div>
-                                            <p>Patient Name</p>
-                                            <p>{userData.name}</p>
-                                        </div>
-                                        <div>
-                                            <p>Age/Gender</p>
-                                            <p>{userData.gender}</p>
-                                        </div>
-                                        <div>
-                                            <p>Bill No</p>
-                                            <p>{userData.billno}</p>
-                                        </div>
-                                        <div>
-                                            <p>Date/ Time</p>
-                                            <p>{userData.date}</p>
-                                        </div>
-                                        <div>
-                                            <p>Receipt No</p>
-                                            <p>{userData.receipt}</p>
+                                            <p className='list-appointement'>Print Bill</p>
                                         </div>
                                     </div>
-                                )}
-
-                            </div>
-                            <div>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Sr.no</th>
-                                            <th scope="col">Service Name</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Quantity</th>
-                                            <th scope="col">Amount</th>
-                                        </tr>
-                                    </thead>
+                                </nav>
+                                <div >
                                     {userData && (
-                                        <tbody>
-                                            {userData.userServiceData.map((service, index) => (
-                                                <tr key={index}>
-                                                    <th scope="row">{index + 1}</th>
-                                                    <td>{service.servicename}</td>
-                                                    <td>{service.price}</td>
-                                                    <td>{service.quantity}</td>
-                                                    <td>{service.amount}</td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
+                                        <div className='d-flex justify-content-between list-color'>
+                                            <div>
+                                                <p>Patient Name</p>
+                                                <p>{userData.name}</p>
+                                            </div>
+                                            <div>
+                                                <p>Age/Gender</p>
+                                                <p>{userData.gender}</p>
+                                            </div>
+                                            <div>
+                                                <p>Bill No</p>
+                                                <p>{userData.billno}</p>
+                                            </div>
+                                            <div>
+                                                <p>Date/ Time</p>
+                                                <p>{userData.date}</p>
+                                            </div>
+                                            <div>
+                                                <p>Receipt No</p>
+                                                <p>{userData.receipt}</p>
+                                            </div>
+                                        </div>
                                     )}
-
-                                </table>
-                                <div className='list-color'>
-                                    <div className='d-flex justify-content-between'>
-                                        <div>
-                                            <p>Mobile Number</p>
-                                            <p>Tax</p>
-                                            <p>Discount</p>
+                                </div>
+                                <div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Sr.no</th>
+                                                <th scope="col">Service Name</th>
+                                                <th scope="col">Price</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        {userData && (
+                                            <tbody>
+                                                {userData.userServiceData.map((service, index) => (
+                                                    <tr key={index} className='border'>
+                                                        <th scope="row">{index + 1}</th>
+                                                        <td>{service.servicename}</td>
+                                                        <td>{service.price}</td>
+                                                        <td>{service.quantity}</td>
+                                                        <td>{service.amount}</td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        )}
+                                    </table>
+                                    <div className='list-color mt-5'>
+                                        <div className='d-flex justify-content-between'>
+                                            <div>
+                                                <p>Mobile Number</p>
+                                                <p>Tax</p>
+                                                <p>Discount</p>
+                                            </div>
+                                            <div>
+                                                <p>9327167743</p>
+                                                <p>200</p>
+                                                <p>50</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p>9327167743</p>
-                                            <p>200</p>
-                                            <p>50</p>
-                                        </div>
-                                    </div>
-                                    <hr></hr>
-                                    <div className='d-flex justify-content-between'>
-                                        <div>
-                                            <p>Total</p>
-                                        </div>
-                                        <div>
-                                            <p>9327167743</p>
+                                        <hr></hr>
+                                        <div className='d-flex justify-content-between'>
+                                            <div>
+                                                <p>Total</p>
+                                            </div>
+                                            <div>
+                                                <p>9327167743</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>

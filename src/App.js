@@ -12,7 +12,7 @@ function App() {
         </div>
       </div>
 
-      <div class="card w-100">
+      <div class="card w-100 details">
         <div class="card-body">
           <Home />
         </div>
