@@ -35,17 +35,6 @@ function Sidebar() {
                 <span className='text-white'>Setting</span>
             </a>
         </div>
-     {/* <h2 className='logo'>LOGO</h2>
-     <div>
-        <p>Dashboard</p>
-        <p>Patient</p>
-        <p>Appoinment</p>
-        <p>Billing</p>
-     </div>
-     <div>
-        <p>Support</p>
-        <p>Setting</p>
-     </div> */}
     </div>
   )
 }

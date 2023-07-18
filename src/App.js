@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="container-fluid min-vh-100">
       <div className='row'>
-        <div className='col-2 vh-100'>
+        <div className='col-lg-2 col-md-4 col-12 vh-100'>
           <Sidebar />
         </div>
-        <div className='col'>
-          <Home/>
+        <div className='col-lg-10 col-md-8 col-12'>
+          <Home />
         </div>
       </div>
     </div>
